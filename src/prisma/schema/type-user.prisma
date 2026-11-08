@@ -1,0 +1,12 @@
+model TypeUser {
+    id Int @id @default(autoincrement())
+    name String
+    description String
+
+    createdAt DateTime @default(now())
+    updatedAt DateTime @updatedAt
+    deletedAt DateTime?
+
+    users User[]
+    @@map("typeUsers")
+}
